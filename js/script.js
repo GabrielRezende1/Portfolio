@@ -1,6 +1,7 @@
 window.onload = () => {
 
     $('#menu ul a').each(function () {
+        let btnID = $(this).attr('id');
         console.log(this);
         console.log($(this).attr('id'));
 
@@ -8,7 +9,7 @@ window.onload = () => {
         console.log($('#conteudoExperiencia').offset().top);
         console.log($('#conteudoEducacao').offset().top);
         $(this).click(function (e) {
-            let btnID = $(this).attr('id');
+            
             e.preventDefault();
             //scrolling
             if (btnID == 'btnSobre') {
@@ -32,7 +33,7 @@ window.onload = () => {
             $('ul a').each(function() {
                 $(this).css('color', 'rgb(83, 115, 127)');
             });
-            $(this).css('color', 'azure');
+            $(this).css('color', 'azure'); 
         });
     });
 
