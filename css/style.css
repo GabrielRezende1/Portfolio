@@ -100,12 +100,16 @@ body, html {height: 100%;}
     padding-left: 5%;
     padding-right: 5%;
 }
-
+/* .conteudoSobre */
 .conteudoSobre div a:first-of-type { /* email */
     text-decoration: none;
     color: rgb(83, 115, 127);
 }
-/* .conteudoSobre */
+
+.conteudoSobre div a:first-of-type:hover {
+    color: rgb(33, 65, 77);
+}
+
 .conteudoSobre h1,
 .conteudoSobre h2,
 .conteudoSobre p {
@@ -141,8 +145,24 @@ body, html {height: 100%;}
     color: rgb(10, 102, 194);
 }
 
+.icons-social a:first-of-type i:hover {
+    color: rgb(10, 62, 154);
+}
+
 .icons-social a:nth-of-type(2) i {
     color: rgb(43, 65, 77);
+}
+
+.icons-social a:nth-of-type(2) i:hover {
+    color: rgb(3, 25, 37);
+}
+
+.icons-social a:nth-of-type(3) i {
+    color: rgb(250, 20, 0);
+}
+
+.icons-social a:nth-of-type(3) i:hover {
+    color: rgb(210, 20, 0);
 }
 
 .linkedin-icon,
@@ -151,6 +171,7 @@ body, html {height: 100%;}
     height: 70px;
 }
 /**/
+/* .conteudoExperiencia */
 .conteudoExperiencia ul{
     list-style-type: none;
 }
@@ -159,49 +180,36 @@ body, html {height: 100%;}
     font-size: 36px;
 }
 
-.conteudoExperiencia ul i {
+.conteudoExperiencia ul i,
+.conteudoExperiencia ul object {
+    float: right;
     font-size: 50px;
+    margin-right: 5px;
 }
 
-.conteudoExperiencia i {
-    float: right;
-}
 /* .conteudoExperiencia coloring */
 .conteudoExperiencia ul i:first-of-type {
-    color: rgb(59, 153, 212);
-}
-
-.conteudoExperiencia ul i:nth-of-type(2) {
-    color: rgb(235, 98, 42);
-}
-
-.conteudoExperiencia ul i:nth-of-type(3) {
     color: rgb(242, 218, 28);
 }
 
-.conteudoExperiencia ul i:nth-of-type(4) {
-    color: rgb(3, 94, 134);
+.conteudoExperiencia ul i:nth-of-type(2) {
+    color: rgb(59, 153, 212);
 }
 
-.conteudoExperiencia ul i:nth-of-type(5) {
+.conteudoExperiencia ul i:nth-of-type(3) {
+    color: rgb(235, 98, 42);
+}
+
+.conteudoExperiencia ul .displayExperiencia:nth-child(3) i:nth-of-type(1) {
     color: rgb(157, 33, 70);
 }
 
-.conteudoExperiencia ul i:nth-of-type(6) {
+.conteudoExperiencia ul .displayExperiencia:nth-child(3) i:nth-of-type(2) {
     color: rgb(245, 197, 0);
 }
 
-.conteudoExperiencia ul i:nth-of-type(7) {
+.conteudoExperiencia ul .displayExperiencia:nth-child(3) i:nth-of-type(3) {
     color: rgb(73, 12, 107);
-}
-
-.conteudoExperiencia ul i:nth-of-type(8) {
-    color: rgb(0, 124, 52);
-}
-
-.conteudoExperiencia ul i:nth-of-type(9) {
-    color: rgb(80, 143, 241);
-    
 }
 /**/
 /* .conteudoEducacao */
@@ -211,7 +219,19 @@ body, html {height: 100%;}
 
 .conteudoEducacao h2 {
     font-size: 26px;
+}
+
+.conteudoEducacao h4 {
     margin-bottom: 20px;
+}
+
+.conteudoEducacao a {
+    text-decoration: none;
+    color: rgb(83, 115, 127);
+}
+
+.conteudoEducacao a:hover {
+    color: rgb(33, 65, 77);
 }
 
 .conteudoEducacao i {
@@ -224,7 +244,7 @@ body, html {height: 100%;}
     color: gray;
 }
 
-.conteudoEducacao i:nth-child(4) {
+.conteudoEducacao i:last-of-type {
     color: gold;
 }
 /**/
@@ -310,6 +330,15 @@ footer > scan {
     }
 }
 
+@media screen and (max-width: 650px) { /* conteudoExperiencia */
+    .displayExperiencia {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
 @media screen and (max-width: 481px) {
     .sideBar {
         height: 10%;
@@ -337,5 +366,9 @@ footer > scan {
 
     .content h2 scan {
         display: block;
+    }
+
+    .icons-social {
+        text-align: center;
     }
 }
