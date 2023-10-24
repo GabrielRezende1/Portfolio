@@ -53,6 +53,11 @@ body, html {height: 100%;}
 .sideBar ul li a {
     color: rgb(83, 115, 127);
     font-size: 26px;
+    transition: 0.4s;
+}
+
+.sideBar ul li a:hover {
+    font-size: 30px;
 }
 
 .sideBar ul li:first-child a {
@@ -139,6 +144,12 @@ body, html {height: 100%;}
 
 .icons-social i{
     font-size: 70px;
+
+    transition: 0.4s;
+}
+
+.icons-social i:hover {
+    transform: scale(1.2);
 }
 
 .icons-social a:first-of-type i {
