@@ -1,6 +1,6 @@
 # Portfolio
-Portfolio Web - HTML/CSS | JavaScript | JQuery 
+Portfólio Web - HTML/CSS | JavaScript | JQuery 
 
-Portfólio de Carreia Web Dev 
+Portfólio upado no Glitch
 
-O mesmo pode ser encontrado em: https://portfolio-web-dev.glitch.me/
+### ![Acessar meu portfólio / Acess my portfolio](https://portfolio-web-dev.glitch.me/)
