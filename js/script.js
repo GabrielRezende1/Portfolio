@@ -11,22 +11,22 @@ window.onload = () => {
         $(this).click(function (e) {
             
             e.preventDefault();
-            //scrolling
+            //scroll-click
             if (btnID == 'btnSobre') {
                 console.log($('#conteudoSobre').offset().top);
                 $('#content').stop().animate({
                     scrollTop: $('#conteudoSobre').offset().top - $('#wrapper').offset().top
-                }, 1000);
+                }, 600);
             }else if (btnID == 'btnExperiencia') {
                 console.log($('#conteudoExperiencia').offset().top);
                 $('#content').stop().animate({
                     scrollTop: $('#conteudoExperiencia').offset().top - $('#wrapper').offset().top
-                }, 1000);
+                }, 600);
             }else if (btnID == 'btnEducacao')  {
                 console.log($('#conteudoEducacao').offset().top);
                 $('#content').stop().animate({
                     scrollTop: $('#conteudoEducacao').offset().top - $('#wrapper').offset().top
-                }, 1000);
+                }, 600);
             }
 
             //reset last link clicked with color

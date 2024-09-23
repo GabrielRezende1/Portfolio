@@ -232,17 +232,21 @@ body, html {height: 100%;}
     font-size: 26px;
 }
 
-.conteudoEducacao h4 {
+.conteudoEducacao a:nth-of-type(2) h4 {
     margin-bottom: 20px;
 }
 
 .conteudoEducacao a {
+    display: inline-block;
     text-decoration: none;
     color: rgb(83, 115, 127);
+
+    transition: 0.4s;
 }
 
 .conteudoEducacao a:hover {
     color: rgb(33, 65, 77);
+    font-size: 17px;
 }
 
 .conteudoEducacao i {
@@ -271,8 +275,8 @@ footer {
     left: 50%;
 }
 
-footer > scan {
-    font-size: 16px;
+footer > span {
+    font-size: 14px;
 }
 /* Screen queries */
 @media screen and (max-width: 961px) {
@@ -336,7 +340,7 @@ footer > scan {
         transform: translateX(-50%);
     }
 
-    footer > scan {
+    footer > span {
         font-size: 12px;
     }
 }
@@ -375,7 +379,7 @@ footer > scan {
         height: 90%;
     }
 
-    .content h2 scan {
+    .content h2 span {
         display: block;
     }
 
