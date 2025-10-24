@@ -1,6 +1,6 @@
 # Portfolio
 Portfólio Web - HTML/CSS | JavaScript | JQuery 
 
-Portfólio upado no Glitch
+Portfólio upado no Vercel
 
-### ![Acessar meu portfólio / Acess my portfolio](https://portfolio-web-dev.glitch.me/)
+### ![Acessar meu portfólio / Acess my portfolio](https://gabriel-rezende.vercel.app/)
