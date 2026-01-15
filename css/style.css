@@ -52,6 +52,7 @@ body, html {height: 100%;}
 }
 
 .sideBar ul li a {
+    text-decoration: none;
     color: rgb(83, 115, 127);
     font-size: 26px;
     transition: 0.4s;
