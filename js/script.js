@@ -16,7 +16,6 @@ window.onload = () => {
         if(!(cSobre == 0)) {
             varCSobre -= cSobre * 2;
         }
-        console.log(varCSobre);
         if(Math.abs(varCSobre) < (cExp - 200)) {
             changeColors('#btnSobre');
         }else if(Math.abs(varCSobre) < (cEdu - 400)) {
