@@ -1,25 +1,23 @@
 window.onload = () => {
-    const cSobre = Math.floor($('#conteudoSobre').offset().top);
-    const cExp = Math.floor($('#conteudoExperiencia').offset().top);
-    const cEdu = Math.floor($('#conteudoEducacao').offset().top);
-    
-    //scroll-mouse
+    const cExp = Math.floor($('#conteudoExperiencia').position().top);
+    const cEdu = Math.floor($('#conteudoEducacao').position().top);
+
+    function changeColors(anchor) {
+        $('#menu ul a').each(function () {
+            $(this).css('color', 'rgb(83, 115, 127)');
+        });
+        $(`#menu ul ${anchor}`).css('color', 'azure');
+    }
+
+    //mouse-scroll
     $('#content').on('scroll', function() {
-        if($('#conteudoSobre').offset().top > ((cExp * -1) + (cExp / 3))) {
-            $('#menu ul a').each(function () {
-                $(this).css('color', 'rgb(83, 115, 127)');
-            });
-            $('#menu ul #btnSobre').css('color', 'azure');
-        }else if(($('#conteudoSobre').offset().top + (cExp / 3)) > ((cEdu * -1) + (cEdu / 3))) {
-            $('#menu ul a').each(function () {
-                $(this).css('color', 'rgb(83, 115, 127)');
-            });
-            $('#menu ul #btnExperiencia').css('color', 'azure'); 
+        const cSobre = Math.abs(Math.floor($('#conteudoSobre').position().top));
+        if(cSobre < (cExp - 200)) {
+            changeColors('#btnSobre');
+        }else if(cSobre < (cEdu - 200)) {
+            changeColors('#btnExperiencia'); 
         }else {
-            $('#menu ul a').each(function () {
-                $(this).css('color', 'rgb(83, 115, 127)');
-            });
-            $('#menu ul #btnEducacao').css('color', 'azure'); 
+            changeColors('#btnEducacao');
         }
     });
 }
