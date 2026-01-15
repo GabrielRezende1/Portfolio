@@ -1,4 +1,5 @@
 window.onload = () => {
+    const cSobre = Math.floor($('#conteudoSobre').position().top);
     const cExp = Math.floor($('#conteudoExperiencia').position().top);
     const cEdu = Math.floor($('#conteudoEducacao').position().top);
 
@@ -11,10 +12,14 @@ window.onload = () => {
 
     //mouse-scroll
     $('#content').on('scroll', function() {
-        const cSobre = Math.abs(Math.floor($('#conteudoSobre').position().top));
-        if(cSobre < (cExp - 200)) {
+        let varCSobre = Math.floor($('#conteudoSobre').position().top);
+        if(!(cSobre == 0)) {
+            varCSobre -= cSobre * 2;
+        }
+        console.log(varCSobre);
+        if(Math.abs(varCSobre) < (cExp - 200)) {
             changeColors('#btnSobre');
-        }else if(cSobre < (cEdu - 200)) {
+        }else if(Math.abs(varCSobre) < (cEdu - 400)) {
             changeColors('#btnExperiencia'); 
         }else {
             changeColors('#btnEducacao');
