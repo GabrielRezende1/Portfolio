@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    $('#content').scrollTop(0);
+});
+
 window.onload = () => {
     const cSobre = Math.floor($('#conteudoSobre').position().top);
     const cExp = Math.floor($('#conteudoExperiencia').position().top);
@@ -9,8 +13,7 @@ window.onload = () => {
         });
         $(`#menu ul ${anchor}`).css('color', 'azure');
     }
-
-    //mouse-scroll
+    
     $('#content').on('scroll', function() {
         let varCSobre = Math.floor($('#conteudoSobre').position().top);
         if(!(cSobre == 0)) {
