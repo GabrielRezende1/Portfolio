@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script defer src="js/script.js"></script>
     
-    <title>Portfólio</title>
+    <title data-i18n="title"></title>
 </head>
 <body>
     <div class="displayType">
@@ -29,16 +29,22 @@
                 <nav id="menu" class="menu">
                     <ul>
                         <li>
-                            <a id="btnSobre" href="#conteudoSobre">Sobre</a>
+                            <a data-i18n="about" id="btnSobre" href="#conteudoSobre"></a>
                         </li>
                         <li>
-                            <a id="btnExperiencia" href="#conteudoExperiencia">Experiência</a>
+                            <a data-i18n="experience" id="btnExperiencia" href="#conteudoExperiencia"></a>
                         </li>
                         <li>
-                            <a id="btnEducacao" href="#conteudoEducacao">Educação</a>
+                            <a data-i18n="education" id="btnEducacao" href="#conteudoEducacao"></a>
                         </li>
                     </ul>
                 </nav><!--menu-->
+                <nav id="language" class="language"><!--language-->
+                    <ul>
+                        <li><a href="index.html" onclick="changeLanguage('en-US')">English</a></li>
+                        <li><a href="index.html"onclick="changeLanguage('pt-BR')">Português</a></li>
+                    </ul>
+                </nav><!--language-->
             </div><!--centerY-->
         </header><!--sideBar-->
 
@@ -47,8 +53,8 @@
                 <section id="conteudoSobre" class="conteudoSobre">
                     <div class="centerY">
                         <h1>Gabriel Santos Rezende</h1>
-                        <h2>Rio de Janeiro - RJ, Brasil · <span>(21) 98165-8235 ·</span> <a href="mailto:gabrielthel9@gmail.com">gabrielthel9@gmail.com</a></h2>
-                        <p>Desenvolvedor Full-Stack e Analista de Sistemas com uma paixão por programação, sempre a par das novas tecnologias por meio da criação e aprimoramento de projetos e ideias.</p>
+                        <h2 data-i18n="location"><span data-i18n="telephone"></span> <a href="mailto:gabrielthel9@gmail.com">gabrielthel9@gmail.com</a></h2>
+                        <p data-i18n="resume"></p>
                         <div class="icons-social">
                             <a href="https://www.linkedin.com/in/gabriel-s-rezende/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="https://github.com/GabrielRezende1" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -111,33 +117,33 @@
                 <section id="conteudoEducacao" class="conteudoEducacao">
                     <div class="centerY">
                         <i class="fa-solid fa-building-columns"></i>
-                        <h1>Tecnólogo em Sistemas de Informação</h1>
-                        <h2>FAETERJ-Paracambi · Fev 2020 - Ago 2024</h2>
-                        <a href="docs/Extrato_Escolar_21-03-2023.pdf" target="_blank"><h4>Ver extrato escolar</h4></a>
+                        <h1 data-i18n="grad-name"></h1>
+                        <h2 data-i18n="grad-location"></h2>
+                        <a href="docs/Extrato_Escolar_21-03-2023.pdf" target="_blank"><h4 data-i18n="grad-link"></h4></a>
                         <span> · </span>
-                        <a href="docs/Diploma SI.pdf" target="_blank"><h4>Ver Diploma</h4></a>
+                        <a href="docs/Diploma SI.pdf" target="_blank"><h4 data-i18n="grad-link2"></h4></a>
                         <div></div>
                         <i class="fa-solid fa-building-columns"></i>
-                        <h1>Pós-Graduação em Tecnologia da Informação</h1>
-                        <h2>Faculdade Líbano · Dez 2024 - Dez 2025</h2>
-                        <a href="docs/Certificado - Tecnologia da Informação - Líbano.pdf" target="_blank"><h4>Ver Diploma</h4></a>
+                        <h1 data-i18n="pgrad-name"></h1>
+                        <h2 data-i18n="pgrad-location"></h2>
+                        <a href="docs/Certificado - Tecnologia da Informação - Líbano.pdf" target="_blank"><h4 data-i18n="pgrad-link"></h4></a>
                         <div></div>
                         <i class="fa-solid fa-building-columns"></i>
-                        <h1>Pós-Graduação em Engenharia de Software</h1>
-                        <h2>Faculdade Líbano · Jan 2025 - Abr 2026</h2>
-                        <a href="docs/Declaração de Cursando - Engenharia de Software - Líbano.pdf" target="_blank"><h4>Ver declaração</h4></a>
+                        <h1 data-i18n="pgrad2-name"></h1>
+                        <h2 data-i18n="pgrad2-location"></h2>
+                        <a href="docs/Declaração de Cursando - Engenharia de Software - Líbano.pdf" target="_blank"><h4 data-i18n="pgrad2-link"></h4></a>
                         <div></div>
                         <i class="fa-solid fa-certificate"></i>
-                        <h1>CCAA Bento Ribeiro</h1>
-                        <h2>Inglês Avançado (2017)</h2>
-                        <a href="docs/Certificado CCAA.pdf" target="_blank"><h4>Ver certificado</h4></a>
+                        <h1 data-i18n="en-course-name"></h1>
+                        <h2 data-i18n="en-course-lang"></h2>
+                        <a href="docs/Certificado CCAA.pdf" target="_blank"><h4 data-i18n="en-course-link"></h4></a>
                         <div style="clear: both;"></div><!--clear float-->
                     </div><!--centerY-->
                 </section><!--conteudoEducacao-->
             </div><!--wrapper-->
         </main><!--content-->
         <footer>
-            <span>Todos os direitos reservados© - 2025</span>
+            <span data-i18n="footer"></span>
         </footer>
         
     </div><!--displayType-->
