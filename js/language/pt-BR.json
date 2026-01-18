@@ -1,0 +1,27 @@
+{
+    "title": "Portfólio",
+    "about": "Sobre",
+    "experience": "Experiência",
+    "education": "Educação",
+
+    "location": "Rio de Janeiro - RJ, Brasil · ",
+    "telephone": "(21) 98165-8235 ·",
+    "resume": "Desenvolvedor Full-Stack e Analista de Sistemas com uma paixão por programação, sempre a par das novas tecnologias por meio da criação e aprimoramento de projetos e ideias.",
+
+    "grad-name": "Tecnólogo em Sistemas de Informação",
+    "grad-location": "FAETERJ-Paracambi · Fev 2020 - Ago 2024",
+    "grad-link": "Ver extrato escolar",
+    "grad-link2": "Ver Diploma",
+    "pgrad-name": "Pós-Graduação em Tecnologia da Informação",
+    "pgrad-location": "Faculdade Líbano · Dez 2024 - Dez 2025",
+    "pgrad-link": "Ver Diploma",
+    "pgrad2-name": "Pós-Graduação em Engenharia de Software",
+    "pgrad2-location": "Faculdade Líbano · Jan 2025 - Abr 2026",
+    "pgrad2-link": "Ver declaração",
+    "en-course-name": "CCAA Bento Ribeiro",
+    "en-course-lang": "Inglês Avançado (2017)",
+    "en-course-link": "Ver certificado",
+
+    "footer": "Todos os direitos reservados© - 2025"
+
+}

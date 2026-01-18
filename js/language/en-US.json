@@ -1,0 +1,27 @@
+{
+    "title": "Portfolio",
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+
+    "location": "Brazil - Rio de Janeiro, RJ · ",
+    "telephone": "+5521981658235 ·",
+    "resume": "Full-Stack Developer and Systems Analyst with a passion for programming, always keeping up with new technologies through the creation and improvement of projects and ideas.",
+
+    "grad-name": "Information Systems Technologist",
+    "grad-location": "FAETERJ-Paracambi · Feb 2020 - Aug 2024",
+    "grad-link": "See school transcript",
+    "grad-link2": "See Technologist's Degree",
+    "pgrad-name": "Postgraduate Studies in Information Technology",
+    "pgrad-location": "Faculdade Líbano · Dec 2024 - Dec 2025",
+    "pgrad-link": "See Postgraduate's Degree",
+    "pgrad2-name": "Postgraduate Studies in Software Engineering",
+    "pgrad2-location": "Faculdade Líbano · Jan 2025 - Apr 2026",
+    "pgrad2-link": "See declaration",
+    "en-course-name": "CCAA Bento Ribeiro",
+    "en-course-lang": "Advanced English (2017)",
+    "en-course-link": "See Certificate",
+
+    "footer": "All Rights Reserved© - 2025"
+
+}
