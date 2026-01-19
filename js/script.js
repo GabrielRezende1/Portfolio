@@ -23,9 +23,22 @@ async function changeLanguage(lang) {
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-    const userPreferredLanguage = localStorage.getItem('language') || 'en';
+    const userPreferredLanguage = localStorage.getItem('language') || 'pt-BR';
     const langData = await fetchLanguageData(userPreferredLanguage);
-    updateContent(langData);
+    updateContent(langData); console.log(userPreferredLanguage);
+
+    $('#language ul a').each(function () {
+        $(this).css('color', 'rgb(83, 115, 127)');
+    });
+
+    switch (userPreferredLanguage) {
+        case 'pt-BR':
+            $('#btnPt').css('color', 'azure');
+            break;
+        case 'en-US':
+            $('#btnEn').css('color', 'azure');
+            break;
+    }
 })
 // Menu buttons logic
 $(document).ready(function () {
