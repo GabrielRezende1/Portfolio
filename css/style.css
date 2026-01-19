@@ -53,21 +53,29 @@ body, html {height: 100%;}
 
 .sideBar ul li a {
     text-decoration: none;
+    text-shadow: 2px 2px black;
     color: rgb(83, 115, 127);
-    font-size: 26px;
     transition: 0.4s;
 }
 
-.sideBar ul li a:hover {
+.sideBar .menu ul li a {
+    font-size: 26px;
+}
+
+.sideBar .menu ul li a:hover {
     font-size: 30px;
 }
 
-.sideBar ul li:first-child a {
+.sideBar .menu ul li:first-child a {
     color: azure;
 }
 
-.sideBar ul:first-child li a {
-    text-shadow: 2px 2px black;
+.sideBar .language ul li a {
+    font-size: 18px;
+}
+
+.sideBar .language ul li a:hover {
+    font-size: 20px
 }
 
 .imgPerfil {
@@ -81,8 +89,13 @@ body, html {height: 100%;}
     text-align: center;
 }
 
-.menu {
+.menu,
+.language {
     text-align: center;
+}
+
+.language ul li a{
+    font-size: 18px;
 }
 
 .content {
@@ -129,6 +142,7 @@ body, html {height: 100%;}
 
 .conteudoSobre h2 {
     font-size: 28px;
+    display: inline-block;
 }
 
 .conteudoSobre p {
@@ -318,8 +332,9 @@ footer > span {
         top: 50%;
     }
 
-    .menu {
-        width: 70%;
+    .menu,
+    .language {
+        width: 35%;
         display: inline-block;
         margin-right: -4px;
         text-align: right;
