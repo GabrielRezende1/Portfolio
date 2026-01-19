@@ -25,7 +25,7 @@ async function changeLanguage(lang) {
 window.addEventListener('DOMContentLoaded', async () => {
     const userPreferredLanguage = localStorage.getItem('language') || 'pt-BR';
     const langData = await fetchLanguageData(userPreferredLanguage);
-    updateContent(langData); console.log(userPreferredLanguage);
+    updateContent(langData);
 
     $('#language ul a').each(function () {
         $(this).css('color', 'rgb(83, 115, 127)');
