@@ -1,6 +1,6 @@
+// Multilingual Webpage logic
 function updateContent(langData) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
-        //const key = $(this).attr(attributeName);
         const key = element.getAttribute('data-i18n');
         element.innerHTML = langData[key];
     });
@@ -17,7 +17,7 @@ async function fetchLanguageData(lang) {
 }
 
 async function changeLanguage(lang) {
-    await setLanguagePreference(lang);
+    setLanguagePreference(lang);
     const langData = await fetchLanguageData(lang);
     updateContent(langData);
 }
@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
 })
-
+// Menu buttons logic
 $(document).ready(function () {
     $('#content').scrollTop(0);
 });
