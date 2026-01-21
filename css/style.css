@@ -334,19 +334,31 @@ footer > span {
 
     .menu,
     .language {
-        width: 35%;
         display: inline-block;
         margin-right: -4px;
-        text-align: right;
 
         position: relative;
         transform: translateY(50%);
         bottom: 50%;
     }
 
+    .menu {
+        width: 55%;
+        text-align: left;
+    }
+
+    .language {
+        width: 15%;
+        text-align: right;
+    }
+
     .menu ul li {
         display: inline-block;
         margin-right: 20px;
+    }
+
+    .language ul {
+        list-style-type: none;
     }
 
     .content {
@@ -363,7 +375,16 @@ footer > span {
     }
 }
 
-@media screen and (max-width: 650px) { /* conteudoExperiencia */
+@media screen and (max-width: 650px) {
+    /* sideBar */
+    .sideBar .menu ul li a {
+    font-size: 20px;
+    }
+
+    .sideBar .menu ul li a:hover {
+        font-size: 24px;
+    }
+    /* conteudoExperiencia */
     .displayExperiencia {
         display: flex;
         flex-direction: column-reverse;
@@ -389,7 +410,8 @@ footer > span {
         top: 50%;
     }
 
-    .menu {
+    .menu,
+    .language {
         display: none;
     }
 
