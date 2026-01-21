@@ -21,8 +21,16 @@ async function changeLanguage(lang) {
     const langData = await fetchLanguageData(lang);
     updateContent(langData);
 }
+// Change btns colors
+function changeColors(anchor) {
+    $('#menu ul a').each(function () {
+        $(this).css('color', 'rgb(83, 115, 127)');
+    });
+    $(`#menu ul ${anchor}`).css('color', 'azure');
+}
 
 window.addEventListener('DOMContentLoaded', async () => {
+    $('#content').scrollTop(0);
     const userPreferredLanguage = localStorage.getItem('language') || 'pt-BR';
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
@@ -41,21 +49,10 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 })
 // Menu buttons logic
-$(document).ready(function () {
-    $('#content').scrollTop(0);
-});
-
 window.onload = () => {
     const cSobre = Math.floor($('#conteudoSobre').position().top);
     const cExp = Math.floor($('#conteudoExperiencia').position().top);
     const cEdu = Math.floor($('#conteudoEducacao').position().top);
-
-    function changeColors(anchor) {
-        $('#menu ul a').each(function () {
-            $(this).css('color', 'rgb(83, 115, 127)');
-        });
-        $(`#menu ul ${anchor}`).css('color', 'azure');
-    }
     
     $('#content').on('scroll', function() {
         let varCSobre = Math.floor($('#conteudoSobre').position().top);
