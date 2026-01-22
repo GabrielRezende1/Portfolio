@@ -22,11 +22,15 @@
 <body>
     <div class="displayType">
         <header id="sideBar" class="sideBar">
-            <div class="centerY">
-                <div class="image">
-                    <img alt="foto de perfil profissional" class="imgPerfil" src="images/pfp.jpg"/>
-                </div><!--image-->
-                <nav id="menu" class="menu">
+            <div class="image">
+                <img alt="foto de perfil profissional" class="imgPerfil" src="images/pfp.jpg"/>
+            </div><!--image-->
+            <label>
+                <i class="fa-solid fa-bars"></i>
+                <input type="checkbox" value="" hidden>
+            </label>
+            <div class="menu-flyout">
+                <nav id="menu-main" class="menu-main">
                     <ul>
                         <li>
                             <a data-i18n="about" id="btnSobre" href="#conteudoSobre"></a>
@@ -38,14 +42,14 @@
                             <a data-i18n="education" id="btnEducacao" href="#conteudoEducacao"></a>
                         </li>
                     </ul>
-                </nav><!--menu-->
-                <nav id="language" class="language"><!--language-->
+                </nav><!--menu-main-->
+                <nav id="menu-language" class="menu-language"><!--language-->
                     <ul>
                         <li><a id="btnEn" href="index.html" onclick="changeLanguage('en-US')">English</a></li>
                         <li><a id="btnPt" href="index.html" onclick="changeLanguage('pt-BR')">Português</a></li>
                     </ul>
-                </nav><!--language-->
-            </div><!--centerY-->
+                </nav><!--menu-language-->
+            </div><!--menu-flyout-->
         </header><!--sideBar-->
 
         <main id="content" class="content">

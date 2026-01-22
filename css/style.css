@@ -17,12 +17,6 @@ body, html {height: 100%;}
     top: 50%;
 }
 
-.centerX {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 /* classes setup */
 
 .displayType {
@@ -33,18 +27,16 @@ body, html {height: 100%;}
     flex-direction: row;
 }
 
-.sideBackground {
-    background-repeat: repeat;
-
-}
-
 .sideBar {
     width: 20%;
     height: 100%;
 
     background-color: rgb(43, 65, 77);
-
     background-image: url("../images/tile.png");
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sideBar ul li {
@@ -58,23 +50,23 @@ body, html {height: 100%;}
     transition: 0.4s;
 }
 
-.sideBar .menu ul li a {
+.sideBar .menu-main ul li a {
     font-size: 26px;
 }
 
-.sideBar .menu ul li a:hover {
+.sideBar .menu-main ul li a:hover {
     font-size: 30px;
 }
 
-.sideBar .menu ul li:first-child a {
+.sideBar .menu-main ul li:first-child a {
     color: azure;
 }
 
-.sideBar .language ul li a {
+.sideBar .menu-language ul li a {
     font-size: 18px;
 }
 
-.sideBar .language ul li a:hover {
+.sideBar .menu-language ul li a:hover {
     font-size: 20px
 }
 
@@ -85,16 +77,25 @@ body, html {height: 100%;}
     border: solid 10px rgb(43, 65, 77);
 }
 
-.image {
-    text-align: center;
+.sideBar label {
+    display: none;
 }
 
-.menu,
-.language {
+.menu-main,
+.menu-language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    justify-content: space-between;
 }
 
-.language ul li a{
+.menu-main ul,
+.menu-language ul {
+    list-style-type: none;
+}
+
+.menu-language ul li a{
     font-size: 18px;
 }
 
@@ -281,7 +282,6 @@ body, html {height: 100%;}
 }
 /**/
 /* elements setup */
-
 a {
     cursor: pointer;
 }
@@ -303,6 +303,8 @@ footer > span {
     }
 
     .sideBar {
+        flex-direction: row;
+        justify-content: space-around;
         width: 100%;
         height: 20%;
     }
@@ -314,11 +316,7 @@ footer > span {
     }
 
     .image {
-        width: 30%;
-        height: 100%;
-        display: inline-block;
-        margin-right: -4px;
-        text-align: left;
+        width: 20%;
     }
 
     .imgPerfil {
@@ -332,33 +330,14 @@ footer > span {
         top: 50%;
     }
 
-    .menu,
-    .language {
-        display: inline-block;
-        margin-right: -4px;
-
-        position: relative;
-        transform: translateY(50%);
-        bottom: 50%;
+    .menu-flyout {
+        display: flex;
+        align-items: center;
     }
 
-    .menu {
-        width: 55%;
-        text-align: left;
-    }
-
-    .language {
-        width: 15%;
-        text-align: right;
-    }
-
-    .menu ul li {
+    .menu-main ul li {
         display: inline-block;
         margin-right: 20px;
-    }
-
-    .language ul {
-        list-style-type: none;
     }
 
     .content {
@@ -375,44 +354,62 @@ footer > span {
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
     /* sideBar */
-    .sideBar .menu ul li a {
-    font-size: 20px;
-    }
-
-    .sideBar .menu ul li a:hover {
-        font-size: 24px;
-    }
-    /* conteudoExperiencia */
-    .displayExperiencia {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 481px) {
     .sideBar {
         height: 10%;
+        justify-content: space-between;
     }
 
-    .image {
-        width: 100%;
-        text-align: center;
+    .sideBar:has(input:checked) .menu-flyout {
+        translate: 0 10%;
     }
 
     .imgPerfil {
-
         position: relative;
         transform: translateY(-50%);
         top: 50%;
     }
 
-    .menu,
-    .language {
-        display: none;
+    .sideBar label {
+        display: flex;
+        align-items: center;
+    }
+
+    .sideBar label i {
+        font-size: 30px;
+        text-shadow: 2px 2px black;
+        color: rgb(83, 115, 127);
+        padding-right: 1rem;
+    }
+
+    .menu-flyout {
+        display: block;
+
+        z-index: 1;
+        inset: 0;
+        position: fixed;
+        translate: 100vw 10%;
+
+        background-color: rgb(43, 65, 77);;
+        transition: 0.4s;
+    }
+
+    .menu-main,
+    .menu-language {
+        height: 45%;
+    }
+
+    .menu-main ul li{
+        display: block;
+    }
+
+    .menu-language {
+        justify-content: end;
+    }
+
+    .menu-language ul li {
+        padding-bottom: 1rem;
     }
 
     .content {
@@ -425,5 +422,12 @@ footer > span {
 
     .icons-social {
         text-align: center;
+    }
+    /* conteudoExperiencia */
+    .displayExperiencia {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 20px;
     }
 }

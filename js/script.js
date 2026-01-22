@@ -23,10 +23,10 @@ async function changeLanguage(lang) {
 }
 // Change btns colors
 function changeColors(anchor) {
-    $('#menu ul a').each(function () {
+    $('#menu-main ul a').each(function () {
         $(this).css('color', 'rgb(83, 115, 127)');
     });
-    $(`#menu ul ${anchor}`).css('color', 'azure');
+    $(`#menu-main ul ${anchor}`).css('color', 'azure');
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
 
-    $('#language ul a').each(function () {
+    $('#menu-language ul a').each(function () {
         $(this).css('color', 'rgb(83, 115, 127)');
     });
 
