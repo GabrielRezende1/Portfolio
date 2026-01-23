@@ -12,7 +12,7 @@ function setLanguagePreference(lang) {
 }
 
 async function fetchLanguageData(lang) {
-    const response = await fetch(`js/language/${lang}.json`);
+    const response = await fetch(`assets/scripts/language/${lang}.json`);
     return response.json();
 }
 
